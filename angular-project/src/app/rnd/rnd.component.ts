@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./rnd.component.css']
 })
 export class RndComponent {
+
+  /*---------  1-way binding  ---------*/
+
   toggleButtonText = "Hide Menu"
   hideArea = false;
-  typedText = "It will be over-written.";
+  oneWayText = "1-way binding text";
 
   onClickMethod(){
     if(this.hideArea == true) {
@@ -22,7 +25,11 @@ export class RndComponent {
   }
 
   onInputMethod(event: any) {
-    this.typedText = event.target.value;
+    this.oneWayText = event.target.value;
   }
+
+  /*---------  2-way binding  ---------*/
+
+  twoWayText = "2-way binding text";
 
 }

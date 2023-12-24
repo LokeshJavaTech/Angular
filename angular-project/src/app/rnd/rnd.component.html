@@ -6,8 +6,13 @@
 
         <!-- Using 1-way binding: String interpolation, Property Binding AND Event Binding -->
 
-        <input [value]="typedText" (input)="onInputMethod($event)">
-        <span>{{typedText}}</span>
+        <input [value]="oneWayText" (input)="onInputMethod($event)">
+        <span>{{oneWayText}}</span>
+
+        <!-- Using 2-way binding -->
+
+        <input [(ngModel)]="twoWayText">
+        <span>{{twoWayText}}</span>
 
     </span>
 </div>
