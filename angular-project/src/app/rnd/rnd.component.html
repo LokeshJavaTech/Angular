@@ -1,0 +1,13 @@
+<div>
+    <span>
+        <button class="toggle--btn" (click)="onClickMethod()"> {{ toggleButtonText }} </button>
+    </span>
+    <span [hidden]="hideArea">
+
+        <!-- Using 1-way binding: String interpolation, Property Binding AND Event Binding -->
+
+        <input [value]="typedText" (input)="onInputMethod($event)">
+        <span>{{typedText}}</span>
+
+    </span>
+</div>
