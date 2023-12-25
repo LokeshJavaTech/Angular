@@ -32,4 +32,8 @@ export class RndComponent {
 
   twoWayText = "2-way binding text";
 
+  /*---------  *ngFor : Structural directive  ---------*/
+
+  eligibleOperations: string[] = ['Print', 'Export', 'Send Email'];
+
 }

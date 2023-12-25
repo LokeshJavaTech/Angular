@@ -14,5 +14,9 @@
         <input [(ngModel)]="twoWayText">
         <span>{{twoWayText}}</span>
 
+        <!-- *ngFor structural directive -->
+
+        <span class="rnd-operation" *ngFor="let item of eligibleOperations">{{ item }}</span>
+
     </span>
 </div>
