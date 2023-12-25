@@ -1,3 +1,7 @@
+# Learning material
+
+https://www.youtube.com/playlist?list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9
+
 # AngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
