@@ -20,4 +20,14 @@ export class ProductListComponent {
     return this.product.price - (this.product.price * this.product.discountPercentage / 100)
   }
 
+  cartCount: number = 0;
+
+  decrementCartValue(){
+    this.cartCount--;
+
+  }
+  incrementCartValue(){
+    this.cartCount++;
+  }
+
 }
