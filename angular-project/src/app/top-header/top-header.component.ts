@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./top-header.component.css']
 })
 export class TopHeaderComponent {
-
+  saleMaxDiscount: number = 25;
 }
