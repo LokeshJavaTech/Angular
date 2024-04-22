@@ -9,8 +9,4 @@ export class SearchComponent {
   
   searchText: string = "";
 
-  updateSearchText(event: any) {
-    this.searchText = event.target.value;
-  }
-
 }
