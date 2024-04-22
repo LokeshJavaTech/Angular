@@ -1,5 +1,9 @@
+<img [src]="product.pImage">
 <p>Name: {{ product.name }}</p>
 <p>Color: {{ product.color }}</p>
 <p>Price: {{ '$' + product.price }}</p>
 <p>Discounted Price: {{ '$' + getDiscountedPrice().toFixed(2) }}</p>
 <p>{{ product.inStockQty > 0 ? 'Only ' + product.inStockQty + ' Left in the stock!' : 'Sorry, We are out of stock!' }}</p>
+<p>
+    <button [disabled] = "product.inStockQty <= 0">Add To Cart</button>
+</p>

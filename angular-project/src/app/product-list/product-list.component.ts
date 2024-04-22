@@ -12,7 +12,8 @@ export class ProductListComponent {
     price: 789,
     color: 'Black',
     discountPercentage: 5.5,
-    inStockQty: 3
+    inStockQty: 10,
+    pImage: '/assets/images/products/iphonex.jpg'
   }
 
   getDiscountedPrice() {
