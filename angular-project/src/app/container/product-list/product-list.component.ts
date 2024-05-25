@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = [
+  masterProducts = [
     {
       id: 1,
       name: "Nike React Infinity Run Flyknit",
@@ -533,8 +533,20 @@ export class ProductListComponent {
     }
   ];
 
-  allCountData = this.products.length;
-  inStockCountData = this.products.filter(p => p.is_in_inventory === true).length;
-  outOfStockCountData = this.products.filter(p => p.is_in_inventory === false).length;
+  allCountData = this.masterProducts.length;
+  inStockCountData = this.masterProducts.filter(p => p.is_in_inventory === true).length;
+  outOfStockCountData = this.masterProducts.filter(p => p.is_in_inventory === false).length;
+
+  products = this.masterProducts;
+
+  filterRadioButtonChangeEventReceivedMethod(filterRadioButtonValueReceived: string) {
+    console.log("Filter Radio button change event has been received at parent component with value: "+filterRadioButtonValueReceived);
+    if (filterRadioButtonValueReceived === "in_stock")
+      this.products = this.masterProducts.filter(p => p.is_in_inventory === true);
+    else if (filterRadioButtonValueReceived === "out_of_stock")
+      this.products = this.masterProducts.filter(p => p.is_in_inventory === false);
+    else
+      this.products = this.masterProducts;
+  }
 
 }
