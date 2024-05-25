@@ -12,8 +12,9 @@ export class SearchComponent {
   @Output()
   searchTextInputEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  searchTextInputEventMethod() {
-    console.log("Search component: On Input event, search text is emitted. Will catch in parent app-container component.");
+  searchTextClickEventMethod(inputElement: HTMLInputElement) {
+    this.searchText = inputElement.value;
+    console.log("Search component: On Input event, search text is emitted. Will catch in parent app-container component = " + this.searchText);
     this.searchTextInputEvent.emit(this.searchText);
   }
 }
