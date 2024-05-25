@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -549,4 +549,6 @@ export class ProductListComponent {
       this.products = this.masterProducts;
   }
 
+  @Input()
+  searchText_productList: string = '';
 }
