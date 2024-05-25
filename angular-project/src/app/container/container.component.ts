@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -28,6 +28,13 @@ export class ContainerComponent {
   }
   incrementCartValue(){
     this.cartCount++;
+  }
+
+  searchText_container: string = '';
+
+  searchTextInputEventReceivedMethod(searchTextReceived: string) {
+    console.log("Container component: Search text is received from app-search component = "+searchTextReceived);
+    this.searchText_container = searchTextReceived;
   }
 
 }
