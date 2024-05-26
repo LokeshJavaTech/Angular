@@ -4,7 +4,9 @@
         (searchTextInputEvent)="searchTextInputEventReceivedMethod($event)"
     ></app-search>
 
-    <product-list [searchText_productList]="searchText_container"></product-list>
+    <product-list [searchText_productList]="searchText_container" #selectedProductTrv></product-list>
+
+    <product-detail *ngIf="selectedProductTrv.selectedProduct"></product-detail>
 
     <!--
     <img [src]="product.pImage">
